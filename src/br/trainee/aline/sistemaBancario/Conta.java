@@ -1,15 +1,16 @@
 package br.trainee.aline.sistemaBancario;
 
-import javax.swing.JOptionPane;
+
 
 public class Conta {
 
-	// Criando as váriaveis
+	// Criando as variáveis
 	int numero;
 	String dono;
 	double saldo;
 	double limite;
 	double salario;
+	Cliente titular;
 
 	// Getters and setters
 	public int getNumero() {
