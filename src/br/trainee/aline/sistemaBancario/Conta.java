@@ -2,12 +2,14 @@ package br.trainee.aline.sistemaBancario;
 
 public class Conta {
 
+	//Criando as váriaveis
 	int numero;
 	String dono;
 	double saldo;
 	double limite;
 	double salario;
 
+	//Getters and setters
 	public int getNumero() {
 		return numero;
 	}
