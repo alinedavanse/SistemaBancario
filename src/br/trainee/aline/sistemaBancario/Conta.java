@@ -1,7 +1,5 @@
 package br.trainee.aline.sistemaBancario;
 
-
-
 public class Conta {
 
 	// Criando as variáveis
@@ -10,6 +8,12 @@ public class Conta {
 	double saldo;
 	double limite;
 	double salario;
+
+	/*
+	 * Com esse código, toda nova Conta criada já terá um novo Cliente
+	 * associado, sem necessidade de instanciálo logo em seguida da instanciação
+	 * de uma Conta. Cliente titular = new Cliente();
+	 */
 	Cliente titular;
 
 	// Getters and setters
