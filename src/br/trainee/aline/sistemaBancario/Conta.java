@@ -1,15 +1,17 @@
 package br.trainee.aline.sistemaBancario;
 
+import javax.swing.JOptionPane;
+
 public class Conta {
 
-	//Criando as váriaveis
+	// Criando as váriaveis
 	int numero;
 	String dono;
 	double saldo;
 	double limite;
 	double salario;
 
-	//Getters and setters
+	// Getters and setters
 	public int getNumero() {
 		return numero;
 	}
@@ -48,6 +50,35 @@ public class Conta {
 
 	public void setSalario(double salario) {
 		this.salario = salario;
+	}
+
+	// Método saca
+	boolean saca(double valor) {
+		if (this.saldo < valor) {
+			return false;
+		} else {
+			this.saldo = this.saldo - valor;
+			return true;
+		}
+
+	}
+
+	// Método deposita
+	void deposita(double quantidade) {
+		this.saldo = this.saldo + quantidade;
+
+	}
+
+	boolean tranfere(Conta destino, double quantidade) {
+		boolean retirou = destino.saca(quantidade);
+
+		if (retirou == false) {
+			return false;
+		} else {
+			this.saldo = this.saldo - quantidade;
+			return true;
+		}
+
 	}
 
 }
