@@ -37,7 +37,7 @@ public class Tela {
 				}
 
 			} else if (menu == 2) {
-				// chamando o metodo mostrar Produtos
+				// chamando o metodo mostrar Clientes
 				JOptionPane.showMessageDialog(null,
 						"Lista do(s) clientes(s) cadastrado(s): " + novoCliente.mostrarClientes(),
 						" Cadastro De Clientes: ", JOptionPane.INFORMATION_MESSAGE);
