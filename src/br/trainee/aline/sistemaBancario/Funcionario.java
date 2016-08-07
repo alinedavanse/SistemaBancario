@@ -2,6 +2,8 @@ package br.trainee.aline.sistemaBancario;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class Funcionario {
 
 	// Atributos do funcionário
@@ -210,6 +212,15 @@ public class Funcionario {
 
 	}
 
+	// Método para mostrar dados do funcionário
+	void mostra() {
+		System.out.println("Nome: " + this.nome);
+		System.out.println("Departamento: " + this.departamento);
+		System.out.println("Data de entrada: " + this.dataEntrada);
+		System.out.println("Salário: " + this.salario);
+		System.out.println("RG: " + this.rg);
+	}
+
 	// Método para calcular ganho anual
 	/*
 	 * void calculaGanhoAnual() { int mes = 0;
@@ -247,14 +258,5 @@ public class Funcionario {
 	 * 
 	 * }
 	 */
-
-	// Método para mostrar dados do funcionário
-	void mostra() {
-		System.out.println("Nome: " + this.nome);
-		System.out.println("Departamento: " + this.departamento);
-		System.out.println("Data de entrada: " + this.dataEntrada);
-		System.out.println("Salário: " + this.salario);
-		System.out.println("RG: " + this.rg);
-	}
 
 }
