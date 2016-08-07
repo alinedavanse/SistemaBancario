@@ -18,6 +18,9 @@ public class Funcionario {
 	double aumentoMensal500;
 	double aumentoSeisMeses200;
 	double aumentoSeisMeses500;
+	int quantidadeFuncionarios;
+	double totalSalarios;
+	double mediaSalarial;
 
 	// Getters e setters
 	public String getNome() {
@@ -50,6 +53,30 @@ public class Funcionario {
 
 	public void setDataEntrada(String dataEntrada) {
 		this.dataEntrada = dataEntrada;
+	}
+
+	public int getQuantidadeFuncionarios() {
+		return quantidadeFuncionarios;
+	}
+
+	public void setQuantidadeFuncionarios(int quantidadeFuncionarios) {
+		this.quantidadeFuncionarios = quantidadeFuncionarios;
+	}
+
+	public double getTotalSalarios() {
+		return totalSalarios;
+	}
+
+	public void setTotalSalarios(double totalSalarios) {
+		this.totalSalarios = totalSalarios;
+	}
+
+	public double getMediaSalarial() {
+		return mediaSalarial;
+	}
+
+	public void setMediaSalarial(double mediaSalarial) {
+		this.mediaSalarial = mediaSalarial;
 	}
 
 	public String getRg() {
@@ -210,6 +237,28 @@ public class Funcionario {
 	void calculaGanhoAnual() {
 		ganhoAnual = aumentoSeisMeses200 + aumentoSeisMeses500 + this.salario;
 
+	}
+
+	// Método que calcule a média de salários de uma empresa, pedindo ao usuário
+	// a grade de funcionários e os salários
+	void mediaSalarios() {
+		int cont = 0;
+
+		System.out.print("Digite a quantidade de funcionários: ");
+		Scanner scanner = new Scanner(System.in);
+		quantidadeFuncionarios = scanner.nextInt();
+
+		while (cont < quantidadeFuncionarios) {
+			cont = cont + 1;
+
+			System.out.print("Digite o salário: ");
+			Scanner scanner1 = new Scanner(System.in);
+			salario = scanner1.nextInt();
+
+			totalSalarios = totalSalarios + salario;
+		}
+		mediaSalarial = totalSalarios / quantidadeFuncionarios;
+		System.out.println("Média salarial: " + mediaSalarial);
 	}
 
 	// Método para mostrar dados do funcionário

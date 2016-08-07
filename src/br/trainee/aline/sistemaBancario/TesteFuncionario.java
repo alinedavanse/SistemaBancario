@@ -28,23 +28,24 @@ public class TesteFuncionario {
 		
 
 		// Recebe aumento f1.recebeAumento(100);
-		f1.recebeAumento();
+	/*	f1.recebeAumento();
 		System.out.println("Aumento Mensal (Janeiro a Fevereiro): " + f1.aumentoMensal200);
 		System.out.println("Aumento Mensal (Agosto a Dezembro): " + f1.aumentoMensal500);
 		System.out.println("Aumento em seis meses (Janeiro a Julho): " + f1.aumentoSeisMeses200);
 		System.out.println("Aumento em seis meses (Agosto a Dezembro): " + f1.aumentoSeisMeses500);
-		System.out.println("Total: " + f1.somaMeses);
+		System.out.println("Total: " + f1.somaMeses); */
 		
 		//f1.calculaGanhoAnual();
 		//System.out.println("Aumento: " + f1.aumentoSeisMeses);
 
 		// Cálculo anual
-		 f1.calculaGanhoAnual();
-		 System.out.println("Anual: " + f1.ganhoAnual);
+		// f1.calculaGanhoAnual();
+		// System.out.println("Anual: " + f1.ganhoAnual);
 
 		// Mostra os dados do funcionário f
 		// f1.mostra();
 
-	}
+		f1.mediaSalarios();
+		}
 
 }
