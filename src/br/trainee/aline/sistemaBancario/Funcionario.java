@@ -22,6 +22,8 @@ public class Funcionario {
 	double totalSalarios;
 	double mediaSalarial;
 
+	Data dataDeEntrada;
+
 	// Getters e setters
 	public String getNome() {
 		return nome;
@@ -268,6 +270,9 @@ public class Funcionario {
 		System.out.println("Data de entrada: " + this.dataEntrada);
 		System.out.println("Salário: " + this.salario);
 		System.out.println("RG: " + this.rg);
+
+		System.out.println("Data de entrada: " + this.dataDeEntrada.formatada());
+
 	}
 
 	// Método para calcular ganho anual
