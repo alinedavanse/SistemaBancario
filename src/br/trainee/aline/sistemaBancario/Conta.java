@@ -86,4 +86,19 @@ public class Conta {
 
 	}
 
+	// Toda array em Java tem um atributo que se chama length, e você pode
+	// acessá-lo
+	// para saber o tamanho do array ao qual você está se referenciando naquele
+	// momento
+	void imprimeArray(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+	}
+	
+/*	void imprimeArray(int[] array) {
+		for (int x : array) {
+		System.out.println(x);
+		} */
+
 }
