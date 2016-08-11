@@ -24,6 +24,13 @@ public class Funcionario {
 
 	Data dataDeEntrada;
 
+	//Construtor recebendo três parâmetros
+	public Funcionario(String nome, String departamento, double salario) {
+		this.nome = nome;
+		this.departamento = departamento;
+		this.salario = salario;
+	}
+
 	// Getters e setters
 	public String getNome() {
 		return nome;

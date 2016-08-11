@@ -7,12 +7,13 @@ public class TesteFuncionario {
 	public static void main(String[] args) {
 
 		// Cria funcionário f1
-		Funcionario f1 = new Funcionario();
+		Funcionario f1 = new Funcionario("Bianca", "TI", 6000);
 		// Cria funcionário f2
-		Funcionario f2 = new Funcionario();
+		Funcionario f2 = new Funcionario("Jessica", "Recepcionista", 1000);
         //Cria data dataf1
 		Data dataf1 = new Data();
 
+		/*
 		// Dados do funcionário f1
 		f1.nome = "José";
 		f1.departamento = "Gerente";
