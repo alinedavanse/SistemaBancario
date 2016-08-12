@@ -68,6 +68,16 @@ public class Conta {
 
 	}
 
+	public void sacar(double quantidade) {
+		// posso sacar até saldo+limite
+		if (quantidade >  this.limite) {
+			System.out.println("Não posso sacar fora do limite!");
+		} else {
+			this.saldo = this.saldo - quantidade;
+			System.out.println("Novo saldo: " +this.saldo);
+		}
+	}
+
 	// Método deposita
 	void deposita(double quantidade) {
 		this.saldo = this.saldo + quantidade;
@@ -95,10 +105,10 @@ public class Conta {
 			System.out.println(array[i]);
 		}
 	}
-	
-/*	void imprimeArray(int[] array) {
-		for (int x : array) {
-		System.out.println(x);
-		} */
+
+	/*
+	 * void imprimeArray(int[] array) { for (int x : array) {
+	 * System.out.println(x); }
+	 */
 
 }
