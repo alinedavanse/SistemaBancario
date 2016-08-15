@@ -21,10 +21,17 @@ public class Funcionario {
 	int quantidadeFuncionarios;
 	double totalSalarios;
 	double mediaSalarial;
+	double quantidadeHoras;
+	double salarioHora;
+	int dependentes;
+	double salarioBruto;
+	double descontoINSS;
+	double descontoIR;
+	double salarioLiquido;
 
 	Data dataDeEntrada;
 
-	//Construtor recebendo três parâmetros
+	// Construtor recebendo três parâmetros
 	public Funcionario(String nome, String departamento, double salario) {
 		this.nome = nome;
 		this.departamento = departamento;
@@ -32,8 +39,73 @@ public class Funcionario {
 	}
 
 	// Getters e setters
+
 	public String getNome() {
 		return nome;
+	}
+
+	public double getSalarioLiquido() {
+		return salarioLiquido;
+	}
+
+	public void setSalarioLiquido(double salarioLiquido) {
+		this.salarioLiquido = salarioLiquido;
+	}
+
+	public double getDescontoIR() {
+		return descontoIR;
+	}
+
+	public void setDescontoIR(double descontoIR) {
+		this.descontoIR = descontoIR;
+	}
+
+	public double getDescontoINSS() {
+		return descontoINSS;
+	}
+
+	public void setDescontoINSS(double descontoINSS) {
+		this.descontoINSS = descontoINSS;
+	}
+
+	public double getSalarioBruto() {
+		return salarioBruto;
+	}
+
+	public void setSalarioBruto(double salarioBruto) {
+		this.salarioBruto = salarioBruto;
+	}
+
+	public int getDependentes() {
+		return dependentes;
+	}
+
+	public void setDependentes(int dependentes) {
+		this.dependentes = dependentes;
+	}
+
+	public double getSalarioHora() {
+		return salarioHora;
+	}
+
+	public void setSalarioHora(double salarioHora) {
+		this.salarioHora = salarioHora;
+	}
+
+	public double getQuantidadeHoras() {
+		return quantidadeHoras;
+	}
+
+	public void setQuantidadeHoras(double quantidadeHoras) {
+		this.quantidadeHoras = quantidadeHoras;
+	}
+
+	public Data getDataDeEntrada() {
+		return dataDeEntrada;
+	}
+
+	public void setDataDeEntrada(Data dataDeEntrada) {
+		this.dataDeEntrada = dataDeEntrada;
 	}
 
 	public void setNome(String nome) {
@@ -142,6 +214,52 @@ public class Funcionario {
 
 	public void setAumentoSeisMeses500(double aumentoSeisMeses500) {
 		this.aumentoSeisMeses500 = aumentoSeisMeses500;
+	}
+
+	// Método que calcula o salário líquido
+	void salarioLiquido() {
+
+		System.out.print("Digite a quantidade de horas trabalhadas: ");
+		Scanner scanner = new Scanner(System.in);
+		quantidadeHoras = scanner.nextInt();
+
+		System.out.print("Digite o salário de horas trabalhadas: ");
+		Scanner scanner1 = new Scanner(System.in);
+		salarioHora = scanner1.nextInt();
+
+		System.out.print("Digite o número de dependentes: ");
+		Scanner scanner11 = new Scanner(System.in);
+		dependentes = scanner11.nextInt();
+
+		salarioBruto = quantidadeHoras * salarioHora + (50 * dependentes);
+
+		System.out.println("Salário bruto: " + this.salarioBruto);
+
+		if (salarioBruto <= 1000) {
+			descontoINSS = salarioBruto * 8.5 / 100;
+
+		} else {
+			descontoINSS = salarioBruto * 9 / 100;
+		}
+
+		System.out.println("Desconto INSS: " + this.descontoINSS);
+
+		if (salarioBruto <= 500) {
+			descontoIR = 0;
+
+		} else if ((salarioBruto > 500) && (salarioBruto <= 1000)) {
+			descontoIR = salarioBruto * 5 / 100;
+
+		} else {
+			descontoIR = salarioBruto * 7 / 100;
+		}
+
+		System.out.println("Desconto IR: " + this.descontoIR);
+
+		salarioLiquido = salarioBruto - descontoINSS - descontoIR;
+
+		System.out.println("Salário líquido: " + this.salarioLiquido);
+
 	}
 
 	// Método para ganhar aumento
