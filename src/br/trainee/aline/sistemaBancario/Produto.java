@@ -13,7 +13,7 @@ public class Produto {
 	String descricao;
 	double preco;
 
-	//Método construtor
+	//Construtor
 	void Produto(int codigo, String descricao, double preco) {
 		this.codigo = codigo;
 		this.descricao = descricao;

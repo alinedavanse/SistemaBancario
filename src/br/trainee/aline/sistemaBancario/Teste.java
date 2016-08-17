@@ -3,21 +3,49 @@ package br.trainee.aline.sistemaBancario;
 public class Teste {
 
 	public static void main(String[] args) {
+
 		
-		/* Conta minhaConta = new Conta();
+		Cliente Aline = new Cliente();
+		Cliente Felix = new Cliente();
+
+		Aline.nome = "Aline";
+		Aline.sobrenome = "Davanse";
+		Aline.idade = 22;
+
+		Felix.nome = "Felix";
+		Felix.sobrenome = "Silva";
+		Felix.idade = 23;
 		
-		minhaConta.saldo = 2000;
-		minhaConta.limite = 2000;
+		System.out.println("-------------DADOS ALINE--------------");
+
+		Conta ContaAline = new Conta(Aline);
+		System.out.println("Nome: " + ContaAline.titular.nome);
+		System.out.println("Sobrenome: " + ContaAline.titular.sobrenome);
+		System.out.println("Idade: " + ContaAline.titular.idade);
+
+		System.out.println("-------------DADOS FELIX--------------");
 		
-		minhaConta.sacar(2001); */
-		
-		Cliente c1 = new Cliente();
-		
-		c1.mudaCPF("2323-2323-1232");
-		
-		
-		
-		
+		Conta ContaFelix = new Conta(Felix);
+		System.out.println("Nome: " + ContaFelix.titular.nome);
+		System.out.println("Sobrenome: " + ContaFelix.titular.sobrenome);
+		System.out.println("Idade: " + ContaFelix.titular.idade);
+
+		// Conta c1 = new Conta();
+
+		// c1.deposita(1000);
+		// System.out.println("Saldo: " + c1.pegaSaldo());
+
+		/*
+		 * Conta minhaConta = new Conta();
+		 * 
+		 * minhaConta.saldo = 2000; minhaConta.limite = 2000;
+		 * 
+		 * minhaConta.sacar(2001);
+		 */
+
+		// Cliente c1 = new Cliente();
+
+		// c1.mudaCPF("2323-2323-1232");
 
 		/*
 		 * Conta[] minhasContas;

@@ -5,10 +5,10 @@ import javax.swing.JOptionPane;
 public class Cliente {
 
 	// Criando as variáveis
-	private String nome;
-	private String sobrenome;
+    String nome;
+    String sobrenome;
 	private String endereco;
-	private int idade;
+    int idade;
 	private String cpf;
 	
 	

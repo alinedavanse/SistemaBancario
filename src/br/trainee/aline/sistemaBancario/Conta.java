@@ -34,7 +34,7 @@ public class Conta {
 	}
 
 	public double getSaldo() {
-		return saldo;
+		return this.saldo + this.limite;
 	}
 
 	public void setSaldo(double saldo) {
@@ -42,7 +42,7 @@ public class Conta {
 	}
 
 	public double getLimite() {
-		return limite;
+		return this.limite;
 	}
 
 	public void setLimite(double limite) {
@@ -55,6 +55,29 @@ public class Conta {
 
 	public void setSalario(double salario) {
 		this.salario = salario;
+	}
+
+	public double pegaSaldo() {
+		return this.saldo;
+	}
+
+	public Cliente getTitular() {
+		return this.titular;
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+
+	//Construtor
+	Conta(Cliente titutar) {
+		// faz mais uma série de inicializações e configurações
+		this.titular = titutar;
+	}
+	
+	Conta(int numero, Cliente titular){
+		this(titular); // chama o construtor que foi declarado acima
+		this.numero = numero;
 	}
 
 	// Método saca
@@ -70,11 +93,11 @@ public class Conta {
 
 	public void sacar(double quantidade) {
 		// posso sacar até saldo+limite
-		if (quantidade >  this.limite) {
+		if (quantidade > this.limite) {
 			System.out.println("Não posso sacar fora do limite!");
 		} else {
 			this.saldo = this.saldo - quantidade;
-			System.out.println("Novo saldo: " +this.saldo);
+			System.out.println("Novo saldo: " + this.saldo);
 		}
 	}
 
