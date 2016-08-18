@@ -4,32 +4,31 @@ public class Teste {
 
 	public static void main(String[] args) {
 
-		
-		Cliente Aline = new Cliente();
-		Cliente Felix = new Cliente();
+	
+	    int total = Conta.getTotalDeContas();
 
-		Aline.nome = "Aline";
-		Aline.sobrenome = "Davanse";
-		Aline.idade = 22;
-
-		Felix.nome = "Felix";
-		Felix.sobrenome = "Silva";
-		Felix.idade = 23;
-		
-		System.out.println("-------------DADOS ALINE--------------");
-
-		Conta ContaAline = new Conta(Aline);
-		System.out.println("Nome: " + ContaAline.titular.nome);
-		System.out.println("Sobrenome: " + ContaAline.titular.sobrenome);
-		System.out.println("Idade: " + ContaAline.titular.idade);
-
-		System.out.println("-------------DADOS FELIX--------------");
-		
-		Conta ContaFelix = new Conta(Felix);
-		System.out.println("Nome: " + ContaFelix.titular.nome);
-		System.out.println("Sobrenome: " + ContaFelix.titular.sobrenome);
-		System.out.println("Idade: " + ContaFelix.titular.idade);
-
+		/*
+		 * Cliente Aline = new Cliente(); Cliente Felix = new Cliente();
+		 * 
+		 * Aline.nome = "Aline"; Aline.sobrenome = "Davanse"; Aline.idade = 22;
+		 * 
+		 * Felix.nome = "Felix"; Felix.sobrenome = "Silva"; Felix.idade = 23;
+		 * 
+		 * System.out.println("-------------DADOS ALINE--------------");
+		 * 
+		 * Conta ContaAline = new Conta(Aline); System.out.println("Nome: " +
+		 * ContaAline.titular.nome); System.out.println("Sobrenome: " +
+		 * ContaAline.titular.sobrenome); System.out.println("Idade: " +
+		 * ContaAline.titular.idade);
+		 * 
+		 * System.out.println("-------------DADOS FELIX--------------");
+		 * 
+		 * Conta ContaFelix = new Conta(Felix); System.out.println("Nome: " +
+		 * ContaFelix.titular.nome); System.out.println("Sobrenome: " +
+		 * ContaFelix.titular.sobrenome); System.out.println("Idade: " +
+		 * ContaFelix.titular.idade);
+		 * 
+		 */
 		// Conta c1 = new Conta();
 
 		// c1.deposita(1000);

@@ -8,6 +8,7 @@ public class Conta {
 	double saldo;
 	double limite;
 	double salario;
+	private static int totalDeContas;
 
 	/*
 	 * Com esse código, toda nova Conta criada já terá um novo Cliente
@@ -69,16 +70,22 @@ public class Conta {
 		this.titular = titular;
 	}
 
-	//Construtor
-	Conta(Cliente titutar) {
-		// faz mais uma série de inicializações e configurações
-		this.titular = titutar;
+	public static int getTotalDeContas() {
+		return Conta.totalDeContas;
 	}
-	
-	Conta(int numero, Cliente titular){
-		this(titular); // chama o construtor que foi declarado acima
-		this.numero = numero;
+
+	Conta() {
+		Conta.totalDeContas = Conta.totalDeContas + 1;
 	}
+
+	/*
+	 * //Construtor Conta(Cliente titutar) { // faz mais uma série de
+	 * inicializações e configurações this.titular = titutar; }
+	 * 
+	 * Conta(int numero, Cliente titular){ this(titular); // chama o construtor
+	 * que foi declarado acima this.numero = numero; }
+	 * 
+	 */
 
 	// Método saca
 	boolean saca(double valor) {

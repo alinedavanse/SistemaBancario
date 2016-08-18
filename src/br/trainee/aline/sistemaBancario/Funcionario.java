@@ -10,6 +10,7 @@ public class Funcionario {
 	String nome;
 	String departamento;
 	double salario;
+
 	double ganhoAnual;
 	String dataEntrada;
 	String rg;
@@ -214,6 +215,10 @@ public class Funcionario {
 
 	public void setAumentoSeisMeses500(double aumentoSeisMeses500) {
 		this.aumentoSeisMeses500 = aumentoSeisMeses500;
+	}
+
+	public Funcionario(String nome) {
+		this.nome = nome;
 	}
 
 	// Método que calcula o salário líquido

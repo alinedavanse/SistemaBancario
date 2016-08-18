@@ -6,9 +6,14 @@ public class TesteFuncionario {
 
 	public static void main(String[] args) {
 
-		//Funcionario f1 = new Funcionario();
+		// Funcionario f1 = new Funcionario();
 
-		//f1.salarioLiquido();
+		// f1.setSalario(100);
+		// System.out.println("Salário: " +f1.getSalario());
+
+		// Funcionario f1 = new Funcionario();
+
+		// f1.salarioLiquido();
 
 		/*
 		 * // Cria funcionário f1 Funcionario f1 = new Funcionario("Bianca",

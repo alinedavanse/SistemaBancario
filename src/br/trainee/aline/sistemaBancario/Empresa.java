@@ -6,6 +6,7 @@ public class Empresa {
 	String cnpj;
 	Funcionario[] funcinarios;
 	int cont = 0;
+	
 
 	public String getNome() {
 		return nome;
@@ -21,6 +22,11 @@ public class Empresa {
 
 	public void setCnpj(String cnpj) {
 		this.cnpj = cnpj;
+	}
+	
+	//Método que retorna o funcionário na posição
+	public Funcionario getFuncionario(int posicao){
+		return this.funcinarios[posicao];
 	}
 
 	// Método que verifica se o funcionário trabalha na empresa
